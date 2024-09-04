@@ -8,6 +8,11 @@ Create Container
 
         docker run -d -p 8080:80 custom-nginx
 
+Exec command Inside the Container
+------------
+
+        docker exec -it 07fef7e9d01e bash
+
 Access Container's Network Namespace
 ------------
 
