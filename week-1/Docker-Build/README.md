@@ -6,7 +6,7 @@ Build Commands
 Create Container
 ------------
 
-        docker run -p 8080:80 custom-nginx
+        docker run -d -p 8080:80 custom-nginx
 
 Access Container's Network Namespace
 ------------
