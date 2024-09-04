@@ -11,7 +11,7 @@ Create Container
 Exec command Inside the Container
 ------------
 
-        docker exec -it <container_id> bash
+        docker exec -it <container_id> hostname
 
 Access Container's Network Namespace
 ------------
