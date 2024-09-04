@@ -2,11 +2,18 @@ Build Commands
 ------------
 
         docker build -t custom-nginx .
+        docker built -t docker build -t java-container-app .
+
+List Images
+------------
+
+        docker image ls
 
 Create Container
 ------------
 
         docker run -d -p 8080:80 custom-nginx
+        docker run -d -p 8081:8080 java-container-app
 
 Exec command Inside the Container
 ------------
