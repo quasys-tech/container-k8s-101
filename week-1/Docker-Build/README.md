@@ -21,3 +21,9 @@ Access Container's Network Namespace
         mkdir -p /var/run/netns/
         ln -sfT /proc/$pid/ns/net /var/run/netns/[container_id]
         ip netns exec [container_id] ip a
+
+Explore the Container Storage Layers
+------------
+
+        dive <image-name>
+
