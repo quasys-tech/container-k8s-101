@@ -1,2 +1,4 @@
-#Build Commands
-docker build -t custom-nginx .
+Build Commands
+------------
+
+        docker build -t custom-nginx .
