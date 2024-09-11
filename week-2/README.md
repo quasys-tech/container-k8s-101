@@ -24,3 +24,9 @@ Connect to LAB Environment
 Change default namespace in kubectl
 ------------
       vagrant@container101-ubuntu:~/demo$ kubectl config set-context --current --namespace=k8s-intro
+
+
+Connect to pod's terminal
+------------
+
+      vagrant@container101-ubuntu:~/demo$ kubectl exec -it k8s-intro-busybox -- /bin/sh   
