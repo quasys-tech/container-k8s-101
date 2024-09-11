@@ -11,12 +11,12 @@ LAB Environment Requirements
 Create LAB Environment
 ------------
 
-    Run Vagrant command in the Vagrant folder.
+        #Run Vagrant command in the Vagrant folder.
         >vagrant up
 
 
 Connect to LAB Environment
 ------------
 
-On the same folder which "vagrant up" run.
+        #On the same folder which "vagrant up" run.
         >vagrant ssh ubuntu_vm
