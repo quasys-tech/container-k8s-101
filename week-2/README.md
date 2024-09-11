@@ -20,3 +20,7 @@ Connect to LAB Environment
 
         #On the same folder which "vagrant up" run.
         >vagrant ssh ubuntu_vm
+
+Change default namespace in kubectl
+------------
+      vagrant@container101-ubuntu:~/demo$ kubectl config set-context --current --namespace=k8s-intro
