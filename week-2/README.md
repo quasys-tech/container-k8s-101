@@ -11,7 +11,7 @@ LAB Environment Requirements
 Create LAB Environment
 ------------
 
-Run Vagrant command in the Vagrant folder.
+ Run Vagrant command in the Vagrant folder.
         >vagrant up
 
 
