@@ -29,9 +29,17 @@ Change default namespace in kubectl
 Connect to pod's terminal
 ------------
 
-      vagrant@container101-ubuntu:~/demo$ kubectl exec -it k8s-intro-busybox -- /bin/sh   
+      vagrant@container101-ubuntu:~/demo$ kubectl exec -it k8s-intro-busybox -- /bin/sh
+
 
 List All Kubernetes API Resources
 ------------
 
       vagrant@container101-ubuntu:~$ kubectl api-resources
+
+List All Deployment in Current Namespace
+------------
+
+       vagrant@container101-ubuntu:~/demo$ kubectl get deployment
+        NAME              READY   UP-TO-DATE   AVAILABLE   AGE
+        k8s-intro-nginx   0/3     3            0           7s
