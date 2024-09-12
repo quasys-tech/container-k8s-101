@@ -19,4 +19,8 @@ Image Registry Commands
       #Replace repo/user name
       vagrant@container101-ubuntu:~/demo/nginx$ docker tag k8s-intro-nginx quay.io/<QUAY-IO-USER>/k8s-intro-nginx:latest
       vagrant@container101-ubuntu:~/demo/nginx$ docker push quay.io/emre_celik/k8s-intro-nginx:latest
-      
+
+
+Container with Persistent Storage
+------------
+      vagrant@container101-ubuntu:~/demo$ docker run -d -p 8080:80 -v /tmp:/tmp k8s-intro-nginx
