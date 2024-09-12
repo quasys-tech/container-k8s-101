@@ -30,3 +30,8 @@ Connect to pod's terminal
 ------------
 
       vagrant@container101-ubuntu:~/demo$ kubectl exec -it k8s-intro-busybox -- /bin/sh   
+
+List All Kubernetes API Resources
+------------
+
+      vagrant@container101-ubuntu:~$ kubectl api-resources
