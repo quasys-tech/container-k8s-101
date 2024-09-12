@@ -7,4 +7,4 @@ spec:
   - name: k8s-intro-nginx
     image: quay.io/emre_celik/k8s-intro-nginx
     ports:
-    - containerPort: 8080
+    - containerPort: 80
