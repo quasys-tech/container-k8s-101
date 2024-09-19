@@ -16,8 +16,8 @@
 
 | K8s Component        | Documentation           |
 | ------------- |:-------------:|
-| Network Policies      | [right-aligned](https://kubernetes.io/docs/concepts/services-networking/network-policies/) |
-| Taints and Tolerations      | [centered](https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/)      |
+| Network Policies      | (https://kubernetes.io/docs/concepts/services-networking/network-policies/) |
+| Taints and Tolerations      | (https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/)      |
 | Node Selectors | https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/      |
 
 
