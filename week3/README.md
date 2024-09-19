@@ -1,13 +1,4 @@
-* service details, diagram.
-* Pod - service networking.
-* How Ingress work?
-* Secrets
-* ETCD encrpytion
-* liveness, readiness probes.
-* Network Policy
-* CNI - weave,calico,ovn-kubernetes
-* DNS - Switching, routing.
-* Authentication - kubeconfig.
+
 
 | K8s Component        | Documentation           |
 | ------------- |:-------------:|
