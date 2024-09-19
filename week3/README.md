@@ -1,4 +1,4 @@
-service details, diagram.
+* service details, diagram.
 service types. nodeport, clusterip, loadbalancer.
 Pod - service networking.
 How Ingress work?
