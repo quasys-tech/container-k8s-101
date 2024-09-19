@@ -13,3 +13,27 @@
 * CNI - weave,calico,ovn-kubernetes
 * DNS - Switching, routing.
 * Authentication - kubeconfig.
+
+
+Taint Node
+------------
+
+        kubectl taint node minikube dedicated=group1:NoSchedule
+        kubectl create -f pod-nginx.yml
+        kubectl get pods
+        kubectl describe pods
+
+Create Pod with Toleration
+------------
+
+        kubectl create -f pod-nginx-with-tolerations.yml
+        kubectl get pods
+
+Inspect Container Filesystem From K8s Host
+------------
+
+        crictl ps
+        crictl inspect <Process-id> | grep -i pid
+        cd /proc/<Process-id>
+        cat /proc/<Process-id>/root/usr/share/nginx/html/index.html
+        
