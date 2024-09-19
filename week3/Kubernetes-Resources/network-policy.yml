@@ -7,16 +7,16 @@ spec:
   podSelector:
     matchLabels:
       app: nginx
-  policyTypes:
-  - Egress
   egress:
-  - to:
-    - namespaceSelector:
-        matchLabels:
-          name: test-np
-      podSelector:
-        matchLabels:
-          nginx-np: "true"
-    ports:
-    - protocol: TCP
-      port: 80
+    - ports:
+        - protocol: TCP
+          port: 80
+      to:
+        - podSelector:
+            matchLabels:
+              app: nginx-np
+          namespaceSelector:
+            matchLabels:
+              name: test-np
+  policyTypes:
+    - Egress
