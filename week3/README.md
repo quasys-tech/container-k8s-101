@@ -16,9 +16,9 @@
 
 | K8s Component        | Documentation           |
 | ------------- |:-------------:|
-| col 3 is      | right-aligned |
-| col 2 is      | centered      |
-| zebra stripes | are neat      |
+| Network Policies      | [right-aligned](https://kubernetes.io/docs/concepts/services-networking/network-policies/) |
+| Taints and Tolerations      | [centered](https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/)      |
+| Node Selectors | https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/      |
 
 
 Taint Node
