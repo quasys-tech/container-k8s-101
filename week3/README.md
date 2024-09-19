@@ -14,6 +14,12 @@
 * DNS - Switching, routing.
 * Authentication - kubeconfig.
 
+| K8s Component        | Documentation           |
+| ------------- |:-------------:|
+| col 3 is      | right-aligned |
+| col 2 is      | centered      |
+| zebra stripes | are neat      |
+
 
 Taint Node
 ------------
@@ -23,11 +29,16 @@ Taint Node
         kubectl get pods
         kubectl describe pods
 
+
 Create Pod with Toleration
 ------------
 
         kubectl create -f pod-nginx-with-tolerations.yml
         kubectl get pods
+
+Remove Taint From Node
+------------
+        kubectl taint nodes minikube dedicated=group1:NoSchedule-
 
 Inspect Container Filesystem From K8s Host
 ------------
