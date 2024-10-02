@@ -57,5 +57,13 @@ Web terminal açıldıktan sonra "kubectl" ve "oc" komutları kullanılabilir.
 
 ![image](https://github.com/user-attachments/assets/e4fbaefa-d574-453d-9253-6200392d820f)
 
+## Deployment
 
+Konsol üzerinde Workloads > Deployments a geçilir. Gelen ekranda "Create Deployment" a tıklanır.
+
+![image](https://github.com/user-attachments/assets/5ef3f314-de83-4dca-92c7-54f561435613)
+
+YAML view'a geçilerek, https://raw.githubusercontent.com/quasys-tech/container-k8s-101/refs/heads/main/week-2/Kubernetes-Resources/k8s-intro-nginx-deployment.yml linkinde bulunan yaml dosyası ilgili alana yapıştırılır.
+
+![image](https://github.com/user-attachments/assets/e88e8d45-8d71-437b-a401-845f972ddfd0)
 
