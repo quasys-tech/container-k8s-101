@@ -15,7 +15,12 @@ Openshift'e login olduktan sonra, Administrator view a geçiş yapılır.
 
 ![image](https://github.com/user-attachments/assets/c36563d9-48f7-4a42-8615-f49b1bd21d09)
 
+### Namespace
 
+Kubernetes deki namespace objesi openshift de project olarak geçmektedir.
+Home > Projects kısmından mevcut namespace'ler görüntülenebilir. Kullanıcılar sadece kendi namespacelerinde yetkili olduklarından, sadece 1 namespace listelenmektedir. 
+
+![image](https://github.com/user-attachments/assets/ae24abb5-74e2-4969-8d3b-3e90941b4405)
 
 ## Cli Terminal
 
@@ -32,9 +37,4 @@ Web terminal açıldıktan sonra "kubectl" ve "oc" komutları kullanılabilir.
 ![image](https://github.com/user-attachments/assets/e4fbaefa-d574-453d-9253-6200392d820f)
 
 
-## Namespace
 
-Kubernetes deki namespace objesi openshift de project olarak geçmektedir.
-Home > Projects kısmından mevcut namespace'ler görüntülenebilir. Kullanıcılar sadece kendi namespacelerinde yetkili olduklarından, sadece 1 namespace listelenmektedir. 
-
-![image](https://github.com/user-attachments/assets/ae24abb5-74e2-4969-8d3b-3e90941b4405)
