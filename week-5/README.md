@@ -67,3 +67,10 @@ YAML view'a geçilerek, https://raw.githubusercontent.com/quasys-tech/container-
 
 ![image](https://github.com/user-attachments/assets/e88e8d45-8d71-437b-a401-845f972ddfd0)
 
+
+Workloads > Pods menüsünden veya Web Terminal aracılığı ile POD'ların running durumda olup olmadıkları kontrol edilir. 
+
+Web terminal üzerinden mevcut podları görmek için "kubectl get pods" komutu kullanılabilir.
+
+
+![image](https://github.com/user-attachments/assets/53f8cf2e-6189-431d-aa25-0c07b439b570)
