@@ -10,6 +10,8 @@ Demo-Login > Username + Password for login to the openshift cluster.
 
 ## Openshift Console
 
+
+
 ## Cli Terminal
 
 "kubectl" ve "oc" komut satırlarını kullanmak için, openshift web-terminaline sağ üstte bulunan simgeye tıklayarak erişebilirsiniz.
