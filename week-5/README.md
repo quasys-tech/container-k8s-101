@@ -17,12 +17,20 @@ Openshift'e login olduktan sonra, Administrator view a geçiş yapılır.
 
 ## Openshift Konsol Bileşenleri
 
-### Namespace
+### Projects/Namespaces
 
 Kubernetes deki namespace objesi openshift de project olarak geçmektedir.
 Home > Projects kısmından mevcut namespace'ler görüntülenebilir. Kullanıcılar sadece kendi namespacelerinde yetkili olduklarından, sadece 1 namespace listelenmektedir. 
 
 ![image](https://github.com/user-attachments/assets/ae24abb5-74e2-4969-8d3b-3e90941b4405)
+
+## Workloads
+
+Workloads menüsü altından pod, deployment, statefulset, secrets, configmap, daemonset gibi kubernetes resourceları görüntülenebilir/yaratılabilir/değiştirilebilir.
+
+![image](https://github.com/user-attachments/assets/1e6a017b-6544-4c0a-b162-4bfc8b6a0807)
+
+
 
 ## Cli Terminal
 
