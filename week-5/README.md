@@ -15,6 +15,8 @@ Openshift'e login olduktan sonra, Administrator view a geçiş yapılır.
 
 ![image](https://github.com/user-attachments/assets/c36563d9-48f7-4a42-8615-f49b1bd21d09)
 
+## Openshift Konsol Bileşenleri
+
 ### Namespace
 
 Kubernetes deki namespace objesi openshift de project olarak geçmektedir.
