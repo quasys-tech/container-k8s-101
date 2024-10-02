@@ -26,10 +26,21 @@ Home > Projects kısmından mevcut namespace'ler görüntülenebilir. Kullanıc�
 
 ## Workloads
 
-Workloads menüsü altından pod, deployment, statefulset, secrets, configmap, daemonset gibi kubernetes resourceları görüntülenebilir/yaratılabilir/değiştirilebilir.
+Workloads menüsü altından pod, deployment, statefulset, secrets, configmap, daemonset gibi openshift-kubernetes resourceları görüntülenebilir/yaratılabilir/değiştirilebilir.
 
 ![image](https://github.com/user-attachments/assets/1e6a017b-6544-4c0a-b162-4bfc8b6a0807)
 
+## Networking
+
+Networking menüsü altından service, ingress, route gibi openshift-kubernetes resourceları görüntülenebilir/yaratılabilir/değiştirilebilir.
+
+![image](https://github.com/user-attachments/assets/2618171e-2134-47f9-b286-945e66aecbc8)
+
+## Storage
+
+Storage menüsü altından, statefull uygulamaların persistentvolume, persistentvolumeclaim gibi bileşenler sayesinde disk attach işlemleri sağlanır. 
+
+![image](https://github.com/user-attachments/assets/26638ea6-6775-436f-97ec-bfce8c22fad2)
 
 
 ## Cli Terminal
