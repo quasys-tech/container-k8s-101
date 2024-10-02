@@ -6,4 +6,4 @@ Openshift Address: https://console-openshift-console.apps.ocpquademo.quasys.com.
 
 ![image](https://github.com/user-attachments/assets/25f4e6fe-798b-4d7c-b6fa-9e8980ca7cd6)
 
-Demo Login > Username + Password for login to the openshift cluster.
+Demo-Login > Username + Password for login to the openshift cluster.
