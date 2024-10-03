@@ -187,3 +187,48 @@ Aşağıdaki komut ile deployment'ın yaml çıktısı alınabilir.
 
 ![image](https://github.com/user-attachments/assets/35ffe8fe-ac4f-4de5-899e-20e214659b6a)
 
+
+## Secrets
+
+Kubernetes Secrets, hassas verileri (şifreler, API anahtarları, tokenler, sertifikalar gibi) depolamak ve yönetmek için kullanılan bir Kubernetes nesnesidir. Kubernetes ortamında uygulamaların bu hassas verilere erişmesi gerektiğinde, bu verileri doğrudan pod’lar içerisine enjekte etmenin yollarını sunar.
+
+Workloads > Secrets menüsünden seçili proje/namespace altındaki secret'lar görüntülenebilir.
+
+
+![image](https://github.com/user-attachments/assets/fa265f67-69fb-41fa-a391-ae8fe087be23)
+
+
+Yeni secret oluşturmak için, sağ üstte bulunan Create > Key/Value Secret seçilir.
+
+
+![image](https://github.com/user-attachments/assets/4621a9e3-2aae-40b6-852b-ccb998d286fe)
+
+
+İlgili alanlar doldurularak secret Create edilir.
+
+
+![image](https://github.com/user-attachments/assets/fc9af64a-faec-483d-8b01-bd5619a21524)
+
+
+Oluşturulan secret objesinin, YAML tabına geçilerek, secret detayları görüntülenebilir. Burada key-value olarak girdiğimiz değerlerde sadece key value'sının clear text olarak yazıldığı value kısmının değiştirildiği görülmektedir. Kubernetes burada base64 encoding kullanır. 
+
+![image](https://github.com/user-attachments/assets/900dba67-771f-423f-9400-1332aafe359b)
+
+
+Base64 decoding ile bu data kolayca açığa çıkarılabilir.
+
+Secret Yaml da bulunan encoded değer bir dosyaya yazılarak aşağıdaki şekilde decode edilebilir.
+
+
+![image](https://github.com/user-attachments/assets/77d77816-cf91-4567-bd69-9ebec30db6d6)
+
+
+Yaml dosyası ile de secret oluşturulabilir. Openshift konsolda sağ üstte yer alan "+" tuşuna basılarak, aşağıdaki linkteki yaml dosyası buraya yapıştırılır ve create edilir.
+
+
+![image](https://github.com/user-attachments/assets/4cc6c003-8a9b-4290-86a5-8d0c419f62cf)
+
+
+
+
+
