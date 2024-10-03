@@ -106,3 +106,13 @@ Eğer Pod içerisinde birden fazla container var ise, containerlar seçilerek de
 ![image](https://github.com/user-attachments/assets/4f105a79-1e2c-4790-a561-59178babc92d)
 
 
+Terminal Tab'ından çalışan pod'un komut satırına bağlanılabilir.
+
+![image](https://github.com/user-attachments/assets/e8ead9e3-de98-46ca-9ad2-d91488729665)
+
+
+Pod'un terminalinde "hostname" "ps -ef" gibi komutlar çalıştırılarak çıktıları incelenebilir.
+
+
+![image](https://github.com/user-attachments/assets/e0ff25c8-1a4f-4966-bb94-ec2305599bbb)
+
