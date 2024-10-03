@@ -74,3 +74,35 @@ Web terminal üzerinden mevcut podları görmek için "kubectl get pods" komutu 
 
 
 ![image](https://github.com/user-attachments/assets/53f8cf2e-6189-431d-aa25-0c07b439b570)
+
+Pod'un detaylarına, Workloads > Pods ekranından podun ismine tıklanarak ulaşılabilir.
+
+Details Tab'ında Pod ile ilgili genel bilgiler bulunur. Pod'un adı, Statüsü, Pod IP adresi, üzerinde çalıştığı Openshift Node'un IP adresi vs.
+
+![image](https://github.com/user-attachments/assets/b8650f82-46bc-4b01-b6b4-55cf01313954)
+
+
+Metrics tabında pod ile ilgili performans metriklerine ve kaynak kullanım detaylarına ulaşılabilir.
+
+![image](https://github.com/user-attachments/assets/9698a09f-c599-4f8b-91a8-51af94eea13a)
+
+
+YAML tabından çalışan pod'un yaml dosyasına ulaşılabilir. Mevcut konfigürasyon ile ilgili bilgiler ve statü bilgileri de yaml da bulunur.
+
+
+![image](https://github.com/user-attachments/assets/20feb5b9-7f68-4be8-bfac-78aaefc0d134)
+
+
+Environment Tabında, pod'un kullandığı environment variable lar var ise bunlar ile ilgili detaylar görülebilir.
+
+
+![image](https://github.com/user-attachments/assets/ec887556-3a04-44e5-a06c-6813e34766f5)
+
+
+Logs tabından, çalışan podun STDOUT a gönderdiği tüm çıktılar izlenebilir. Pod restart olursa bu podlar da kaybolur.
+Eğer Pod içerisinde birden fazla container var ise, containerlar seçilerek de ilgili container'a ait loglara erişilebilir.
+
+
+![image](https://github.com/user-attachments/assets/4f105a79-1e2c-4790-a561-59178babc92d)
+
+
