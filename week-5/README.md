@@ -229,6 +229,34 @@ Yaml dosyası ile de secret oluşturulabilir. Openshift konsolda sağ üstte yer
 ![image](https://github.com/user-attachments/assets/4cc6c003-8a9b-4290-86a5-8d0c419f62cf)
 
 
+![image](https://github.com/user-attachments/assets/5c9a7d38-7f4d-479b-bd94-8f187cd37278)
+
+
+Oluşturulan secret'ı daha önce oluşturduğumuz deployment'a attach etmek için, menüden Workloads > Deployments a geçilir. "k8s-intro-nginx" deployment içerisine girilir.
+
+          spec:
+            containers:
+              - name: k8s-intro-nginx
+                image: quay.io/emre_celik/k8s-intro-nginx
+                ports:
+                  - containerPort: 80
+                    protocol: TCP
+                env:
+                  - name: DEMO_SECRET
+                    valueFrom:
+                      secretKeyRef:
+                        name: k8s-demo-secret
+                        key: demosecret
+                resources: {}
+                terminationMessagePath: /dev/termination-log
+                terminationMessagePolicy: File
+                imagePullPolicy: Always
+
+
+![image](https://github.com/user-attachments/assets/7777afca-f0b7-4487-8d7e-979f8e7a16c4)
+
+
+
 
 
 
