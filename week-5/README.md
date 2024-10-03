@@ -267,7 +267,17 @@ Workloads > Pods menüsünden k8s-intro-nginx podlarından herhangi birine giril
 
 ![image](https://github.com/user-attachments/assets/6ae5f95d-ca82-455a-80d4-398591165c4b)
 
+## SERVICE
 
+Kubernetes'te çalışan pod'lar arasındaki ağ trafiğini yöneten ve bir grup pod'u bir araya getiren soyut bir ağ kaynağıdır. Servis, pod'ların değişken IP adreslerine sahip olmasına rağmen onlara tutarlı bir Servis IP adresi ve DNS adı sağlar, böylece uygulamalar arasında sabit bir iletişim noktası oluşturur. Kubernetes cluster'ında genellikle farklı bileşenlerin birbiriyle haberleşmesini sağlamak amacıyla kullanılır.
+
+Networking > Services menüsünden "Create Service" tıklanarak aşağıdaki yaml içeriği yapıştırılarak demo servis oluşturulabilir.
+
+https://github.com/quasys-tech/container-k8s-101/blob/main/week-2/Kubernetes-Resources/k8s-intro-nginx-service.yml
+
+![image](https://github.com/user-attachments/assets/0d2080f6-bb42-458d-bc7f-dd6aaa12b5b8)
+
+![image](https://github.com/user-attachments/assets/4b0e6bde-3476-4e43-a0ba-26cc2193d9c9)
 
 
 
