@@ -170,3 +170,20 @@ Pods tabında, deployment tarafından yaratılmış olan podlar görüntülenebi
 ![image](https://github.com/user-attachments/assets/5b6d8ece-a4ff-4a82-a9f1-4eaae077086d)
 
 
+Deployment detaylarına terminal üzerinden ulaşmak için, aşağıdaki komutlar kullanılabilir.
+
+      kubectl get deployment
+      kubectl describe deployment <deployment-adı>
+
+
+![image](https://github.com/user-attachments/assets/80f7a5f4-14c1-482d-9ebb-abfe6385c212)
+
+
+Aşağıdaki komut ile deployment'ın yaml çıktısı alınabilir.
+
+
+      kubectl get deployment <deployment-adı> -o yaml
+
+
+![image](https://github.com/user-attachments/assets/35ffe8fe-ac4f-4de5-899e-20e214659b6a)
+
