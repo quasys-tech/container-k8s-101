@@ -64,13 +64,15 @@ Web terminal açıldıktan sonra "kubectl" ve "oc" komutları kullanılabilir.
 
 ![image](https://github.com/user-attachments/assets/e4fbaefa-d574-453d-9253-6200392d820f)
 
-## Deployment
+## Demo Uygulama Deploy
+
+Demo sırasında openshift'e deploy edilecek uygulama, deployment tipinde bir kubernetes resource'u kullanılarak deploy edilecektir. Deployment, belirli bir sayıda pod’un Kubernetes kümesi üzerinde koşmasını sağlayan ve bu pod'ları yönetmek için kullanılan bir mekanizmadır.
 
 Konsol üzerinde Workloads > Deployments a geçilir. Gelen ekranda "Create Deployment" a tıklanır.
 
 ![image](https://github.com/user-attachments/assets/5ef3f314-de83-4dca-92c7-54f561435613)
 
-YAML view'a geçilerek, https://raw.githubusercontent.com/quasys-tech/container-k8s-101/refs/heads/main/week-2/Kubernetes-Resources/k8s-intro-nginx-deployment.yml linkinde bulunan yaml dosyası ilgili alana yapıştırılır.
+YAML view'a geçilerek, https://raw.githubusercontent.com/quasys-tech/container-k8s-101/refs/heads/main/week-2/Kubernetes-Resources/k8s-intro-nginx-deployment.yml linkinde bulunan yaml içeriği ilgili alana yapıştırılır.
 
 ![image](https://github.com/user-attachments/assets/e88e8d45-8d71-437b-a401-845f972ddfd0)
 
@@ -82,7 +84,11 @@ Web terminal üzerinden mevcut podları görmek için "kubectl get pods" komutu 
 
 ![image](https://github.com/user-attachments/assets/53f8cf2e-6189-431d-aa25-0c07b439b570)
 
-Pod'un detaylarına, Workloads > Pods ekranından podun ismine tıklanarak ulaşılabilir.
+## POD
+
+Pod, Kubernetes ortamında yönetilebilen en küçük ve basit birimdir. Bir pod, bir veya daha fazla konteyneri içerir ve bu konteynerler aynı ağ ve depolama kaynaklarını paylaşır.
+
+Pod'un detaylarına, Workloads > Pods ekranından podun ismine tıklanarak ulaşılabilir. Üst tarafta seçili olan Project: demo-namespace* podların bulunduğu namespace/projeyi bildirir. Podlar namespace bazlı objelerdir, her podun ait olduğu bir namespace/projesi bulunur.
 
 Details Tab'ında Pod ile ilgili genel bilgiler bulunur. Pod'un adı, Statüsü, Pod IP adresi, üzerinde çalıştığı Openshift Node'un IP adresi vs.
 
@@ -123,3 +129,11 @@ Pod'un terminalinde "hostname" "ps -ef" gibi komutlar çalıştırılarak çıkt
 
 ![image](https://github.com/user-attachments/assets/e0ff25c8-1a4f-4966-bb94-ec2305599bbb)
 
+Komut satırından pod ile ilgili bilgilere ulaşmak için aşağıdaki komutlar kullanılabilir.
+
+      asdasd
+
+
+## DEPLOYMENT
+
+Demo Uygulama Deploy adımında yaratılan deployment detaylarını görmek için, Konsolda Workloads > 
