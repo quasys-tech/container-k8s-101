@@ -279,5 +279,89 @@ https://github.com/quasys-tech/container-k8s-101/blob/main/week-2/Kubernetes-Res
 
 ![image](https://github.com/user-attachments/assets/4b0e6bde-3476-4e43-a0ba-26cc2193d9c9)
 
+Workloads > Pods menüsünden k8s-intro-nginx podlarından herhangi birisine girilerek, mevcut podlardaki label bilgilerine ulaşılabilir.
+
+Servisi oluştururken de yaml içerisinde selector alanında bu label bilgileri verilir. Servis trafiği hangi podlara yönelteceğini labellar sayesinde belirler.
+
+![image](https://github.com/user-attachments/assets/15aa3383-64c9-46ff-9091-4e28c335caab)
+
+Networking > Services menüsünden, oluşturulan k8s-intro-nginx-service servisine girildiğinde,
+
+Details: servis ile ilgili genel bilgiler, dns adı, dinlediği port bilgisi, pod'a trafiği ileteceği port bilgisi, pod selector bilgilerine ulaşılabilir.
+YAML: Servisin yaml haline ulaşılabilir.
+Pods: Servisin hizmet ettiği podların listesine ulaşılabilir.
+
+![image](https://github.com/user-attachments/assets/e3279f3a-19e2-4cf5-825a-f8c8f287ebfe)
+
+![image](https://github.com/user-attachments/assets/96178d96-8305-45b0-b45e-2813044f2116)
+
+Networking > Services menüsünden, oluşturulan k8s-intro-nginx-service servisine girilir. Hostname alanındaki DNS adı kopyalanır "k8s-intro-nginx-service.demo-namespace3.svc.cluster.local".
+
+![image](https://github.com/user-attachments/assets/5171c763-a945-4464-9471-167bdc2e944c)
+
+Farklı uygulamalar Kubernetes içerisinde birbirleriyle service objeleri üzerinden haberleşirler. HEr bir servisin Kubernetes içerisindeki DNS de tutulan bir DNS kaydı vardır. Bu standard da servis-adı.namespace.svc.cluster.local şeklindedir.
+
+WOrkloads > Pods menüsünden herhangi bir k8s-intro-nginx-* poduna girilir ve Terminal tabına geçilir. Nslookup komutuyla pod içerisinden servis DNS inin çözülebildiği görülür. Farklı namespace de bulunan uygulamalar da bu DNS kaydı ile servise erişebilir.
+
+
+![image](https://github.com/user-attachments/assets/f5a5f715-da43-43a2-bc26-e9821ebc6afa)
+
+Pod terminalinden, aşağıdaki komut ile servise curl isteği atıldığında cevap alınabildiği görülür.
+
+      curl k8s-intro-nginx-service.demo-namespace3.svc.cluster.local
+
+![image](https://github.com/user-attachments/assets/4e1e4bea-624d-4407-9c58-8dbc695b8a67)
+
+
+Workloads > Pods menüsünden herhangi bir k8s-intro-nginx-* poduna girilerek, ip bilgisi kopyalanır.
+
+Pod terminalinden aynı istek servis yerine pod ip adresine yapıldığında, aynı cevabın döndüğü görülür.
+
+![image](https://github.com/user-attachments/assets/3495d0bb-a583-41b8-91f3-4d17c17e3153)
+
+![image](https://github.com/user-attachments/assets/ecff0bfc-97a3-4b05-9125-e38366d6a372)
+
+
+
+## ROUTE - Uygulamanın Openshift Dışına Açılması
+
+OpenShift Route, dış dünyadan Kubernetes veya OpenShift cluster'ında çalışan bir servise erişim sağlamak için kullanılan bir kaynak türüdür. Route, uygulamalarınıza dışarıdan HTTP veya HTTPS trafiğini yönlendiren ve uygulamanın dış dünyaya açılmasını sağlayan bir yol tanımlar. OpenShift, Route'ları kullanarak dış dünyadan gelen istekleri belirli bir servise ve dolayısıyla arka plandaki pod'lara yönlendirir.
+
+Networking > Routes menüsünden Route ekranına geçilebilir.
+
+Yeni bir Route yaratmak için "Create Route" butonuna basılır.
+
+
+![image](https://github.com/user-attachments/assets/1cb980c0-b898-4131-9f6c-3686519960b5)
+
+Aşağıdaki bilgilerle yeni bir route create edilir.
+
+Name: k8s-intro
+Hostname: Boş bırakılır
+Service: k8s-intro-nginx-service seçilir
+Target Port: 80 -> 80 TCP
+Secure Route kutucuğu işaretlenir.
+      TLS Termination: Edge
+      Insecure Traffic: None
+
+
+![image](https://github.com/user-attachments/assets/14c2b455-d08f-41ae-8666-36b85d73e895)
+
+![image](https://github.com/user-attachments/assets/6cd49637-bd93-4897-8a5b-7a0592987c64)
+
+Oluşturulan Route içerisine girilip incelendiğinde, Details kısmında Route ile ilgili detaylar görülebilir.
+
+Openshift uygulamaları expose ederken kendi wildcard DNS i üzerinden expose etme imkanı tanır. Böylece yeni bir DNS kaydı veya LB tanımı yapılmadan uygulama openshift üzerinden dışarıya açılabilir.
+
+Burada "*.apps.ocpquademo.quasys.com.tr" için bir wildcard DNS kaydı tutulur ve oluşturulan route'lar bu suffix ile oluşturulur. Örneğin https://k8s-intro-demo-namespace3.apps.ocpquademo.quasys.com.tr/
+
+Alternatif olarak, kendi DNS kaydınızı ve LB tanımınızı yaparak da custom bir adres için Route oluşturabilirsiniz. (Örneğin https://k8s-intro.company.com.tr ) Demo sırasında kolay olması adına openshift'in wildcard adresi tercih edilmiştir.
+
+"Location" kısmında bulunan link aracılığı ile uygulamaya erişim sağlanabilir.
+
+
+![image](https://github.com/user-attachments/assets/e607b566-5cbc-4916-9b24-395a462c32ed)
+
+![image](https://github.com/user-attachments/assets/82283be2-9571-4af3-9236-0c3bf1a158f5)
 
 
