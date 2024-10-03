@@ -15,6 +15,13 @@ Openshift'e login olduktan sonra, Administrator view a geçiş yapılır.
 
 ![image](https://github.com/user-attachments/assets/c36563d9-48f7-4a42-8615-f49b1bd21d09)
 
+
+Demo'nun yapılacağı namespace'e geçmek için, Home > Projects > demo-namespace* seçilir
+
+![image](https://github.com/user-attachments/assets/fb442c98-fd01-4bab-9c73-5619aa6b22dc)
+![image](https://github.com/user-attachments/assets/49182d4a-c294-43e8-9b81-5a1a69bce97d)
+
+
 ## Openshift Konsol Bileşenleri
 
 ### Projects/Namespaces
