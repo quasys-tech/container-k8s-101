@@ -225,6 +225,7 @@ Secret Yaml da bulunan encoded değer bir dosyaya yazılarak aşağıdaki şekil
 
 Yaml dosyası ile de secret oluşturulabilir. Openshift konsolda sağ üstte yer alan "+" tuşuna basılarak, aşağıdaki linkteki yaml dosyası buraya yapıştırılır ve create edilir.
 
+https://raw.githubusercontent.com/quasys-tech/container-k8s-101/refs/heads/main/week-2/Kubernetes-Resources/k8s-intro-secret.yml
 
 ![image](https://github.com/user-attachments/assets/4cc6c003-8a9b-4290-86a5-8d0c419f62cf)
 
@@ -232,7 +233,11 @@ Yaml dosyası ile de secret oluşturulabilir. Openshift konsolda sağ üstte yer
 ![image](https://github.com/user-attachments/assets/5c9a7d38-7f4d-479b-bd94-8f187cd37278)
 
 
-Oluşturulan secret'ı daha önce oluşturduğumuz deployment'a attach etmek için, menüden Workloads > Deployments a geçilir. "k8s-intro-nginx" deployment içerisine girilir.
+Oluşturulan secret'ı daha önce oluşturduğumuz deployment'a attach etmek için, menüden Workloads > Deployments a geçilir. "k8s-intro-nginx" deployment içerisine girilir. spec.containers altında aşağıdaki gibi env: ile başlayan 6 satırlık blok eklenir. 
+
+Buna alternatif olarak da mevcut deployment delete edilerek, aşağıdaki linkte bulunan içerisine env eklenmiş deployment dosyası da Create Deployment > YAML view içerisine yapıştırılarak secret attach edilmiş deployment yaratılabilir.
+
+https://raw.githubusercontent.com/quasys-tech/container-k8s-101/refs/heads/main/week-2/Kubernetes-Resources/k8s-nginx-deployment-with-secret.yml
 
           spec:
             containers:
@@ -255,6 +260,12 @@ Oluşturulan secret'ı daha önce oluşturduğumuz deployment'a attach etmek iç
 
 ![image](https://github.com/user-attachments/assets/7777afca-f0b7-4487-8d7e-979f8e7a16c4)
 
+
+Workloads > Pods menüsünden k8s-intro-nginx podlarından herhangi birine girilip, Terminal tabına geçilir. Environment Variable olarak attach edilen secret burada görüntülenebilir.
+
+      echo $DEMO_SECRET
+
+![image](https://github.com/user-attachments/assets/6ae5f95d-ca82-455a-80d4-398591165c4b)
 
 
 
