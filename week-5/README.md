@@ -112,7 +112,7 @@ Environment Tabında, pod'un kullandığı environment variable lar var ise bunl
 ![image](https://github.com/user-attachments/assets/ec887556-3a04-44e5-a06c-6813e34766f5)
 
 
-Logs tabından, çalışan podun STDOUT a gönderdiği tüm çıktılar izlenebilir. Pod restart olursa bu podlar da kaybolur.
+Logs tabından, çalışan podun STDOUT a gönderdiği tüm çıktılar izlenebilir. Pod restart olursa bu loglar da kaybolur.
 Eğer Pod içerisinde birden fazla container var ise, containerlar seçilerek de ilgili container'a ait loglara erişilebilir.
 
 
