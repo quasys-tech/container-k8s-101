@@ -131,9 +131,42 @@ Pod'un terminalinde "hostname" "ps -ef" gibi komutlar çalıştırılarak çıkt
 
 Komut satırından pod ile ilgili bilgilere ulaşmak için aşağıdaki komutlar kullanılabilir.
 
-      asdasd
+      kubectl get pods
+      kubectl describe pod <pod-adı>
+
+![image](https://github.com/user-attachments/assets/fce36793-f0aa-4e5d-8b5e-3fb228d60548)
+
+Pod'un loglarına ulaşmak için;
+
+      kubectl logs <pod-adı>
+
+![image](https://github.com/user-attachments/assets/baf2e5d7-ef7d-4b09-a2a9-65d60f023710)
 
 
 ## DEPLOYMENT
 
-Demo Uygulama Deploy adımında yaratılan deployment detaylarını görmek için, Konsolda Workloads > 
+Demo Uygulama Deploy adımında yaratılan deployment detaylarını görmek için, Konsolda Workloads > Deployments menüsüne geçilir. Deploymentların listelendiği bu ekranda, Üst tarafta Project: demo-project* ile halihazırda seçili olan namespace/proje görülebilir. Deployment da namespace/project bazlı bir kubernetes nesnesidir.
+
+
+![image](https://github.com/user-attachments/assets/67e1aeab-a6f8-493a-886c-f4d69983f22a)
+
+
+Deployments ekranında, k8s-intro-nginx e tıklanarak deployment detayları görüntülenebilir.
+
+Bu ekranda, deployment replica sayısı, Deployment Update Strategy (yeni versiyon çıktığında bu versiyonun nasıl uygulanacağı ile ilgili bilgi), Pod label, Node Selector, Toleration gibi bilgiler bulunur.
+
+![image](https://github.com/user-attachments/assets/885a3736-e26d-4a3b-aded-d4479d11b8c3)
+
+
+Replicasets tabında, deployment'a bağlı replicaset görüntülenebilir.
+
+
+![image](https://github.com/user-attachments/assets/8567b4cb-2764-48c3-a006-e9854955dc1e)
+
+
+Pods tabında, deployment tarafından yaratılmış olan podlar görüntülenebilir.
+
+
+![image](https://github.com/user-attachments/assets/5b6d8ece-a4ff-4a82-a9f1-4eaae077086d)
+
+
