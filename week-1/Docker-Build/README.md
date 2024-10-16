@@ -96,11 +96,11 @@ Add non Root User to Go Scratch Build
         root@container101-ubuntu:~/container-k8s-101/week-1/Docker-Build/go-scratch-nonroot# docker build -t go-scratch-nonroot:0.1-scratch-nonroot . --no-cache
         root@container101-ubuntu:~/container-k8s-101/week-1/Docker-Build/go-scratch-nonroot# docker image ls
                 REPOSITORY           TAG                   IMAGE ID       CREATED          SIZE
-                go-stratch-nonroot   0.1-scratch-nonroot   817ac29986d3   32 seconds ago   7.06MB
-        root@container101-ubuntu:~/container-k8s-101/week-1/Docker-Build/go-scratch-nonroot# docker run -d -p 8082:8080 go-stratch-nonroot:0.1-scratch-nonroot
+                go-scratch-nonroot   0.1-scratch-nonroot   817ac29986d3   32 seconds ago   7.06MB
+        root@container101-ubuntu:~/container-k8s-101/week-1/Docker-Build/go-scratch-nonroot# docker run -d -p 8082:8080 go-scratch-nonroot:0.1-scratch-nonroot
         root@container101-ubuntu:~/container-k8s-101/week-1/Docker-Build/go-scratch-nonroot# docker ps
                 CONTAINER ID   IMAGE                                    COMMAND                  CREATED             STATUS             PORTS                    NAMES
-                1910f10d74e2   go-stratch-nonroot:0.1-scratch-nonroot   "/go/bin/app"            3 seconds ago       Up 2 seconds       0.0.0.0:8082->8080/tcp   recursing_joliot
+                1910f10d74e2   go-scratch-nonroot:0.1-scratch-nonroot   "/go/bin/app"            3 seconds ago       Up 2 seconds       0.0.0.0:8082->8080/tcp   recursing_joliot
         root@container101-ubuntu:~/container-k8s-101/week-1/Docker-Build/go-scratch-nonroot# curl 127.0.0.1:8082/hello
         {"code":200,"result":"Hello World!"}
         root@container101-ubuntu:~/container-k8s-101/week-1/Docker-Build/go-scratch-nonroot# docker container top recursing_joliot
