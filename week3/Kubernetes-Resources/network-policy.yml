@@ -17,6 +17,6 @@ spec:
               app: nginx-np
           namespaceSelector:
             matchLabels:
-              name: test-np
+              kubernetes.io/metadata.name: test-np
   policyTypes:
     - Egress
