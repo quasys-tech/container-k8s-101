@@ -18,3 +18,5 @@ Checkov uses a common command line interface to manage and analyze infrastructur
 https://www.checkov.io/
 https://github.com/bridgecrewio/checkov
 
+    checkov -f Dockerfile
+    bash -c 'find -iname chart.yaml' | xargs -n1 -I% bash -c " dirname %" | xargs -n1 -I% bash -c "helm template % > %.yaml && checkov -f %.yaml --framework kubernetes || true" --![image](https://github.com/user-attachments/assets/f144aeef-e507-44bc-bc4b-d7efcdb548bc)
