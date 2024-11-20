@@ -1,0 +1,12 @@
+# Default values for ratings-api TEST.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+environment: test
+
+image:
+  repository: quay.io/swoturkey/ratings-api
+  tag: master
+
+###### SECRETS ######
+mongodb_uri: "mongodb://sa:sa123@ratings-mongodb.ratings-app-test:27017/ratingsdb"

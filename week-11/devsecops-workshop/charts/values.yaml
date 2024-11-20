@@ -1,0 +1,33 @@
+# Default values for ratings-api.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+# Common controls
+environment: dev
+application: ratings-api
+containerPort: 3000
+
+# Service controls
+service:
+  name: ratings-api-svc
+  type: ClusterIP
+  port: 80
+
+# Deployment controls
+restartPolicy: Always
+
+replicas: 1
+resources:
+  requests:
+    cpu: 250m
+    memory: 64Mi
+  limits:
+    cpu: 1
+    memory: 256Mi
+
+image:
+  repository: quay.io/swoturkey/ratings-api
+  tag: master
+
+###### SECRETS ######
+mongodb_uri: "mongodb://sa:sa123@mongodb.ratingsapp:27017/ratingsdb"
